@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- ملف CSS خاص بك (اختياري) -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">List Book</h1>
+        <table class="table table-striped table-bordered shadow">
+            <thead class="table-primary">
+                <tr>
+                    <th>Title</th>
+                    <th>author</th>
+                    <th>تفاصيل</th>
+                    <th>تعديل</th>
+                    <th>حذف</th>
+                    <th>صورة</th> <!-- عمود الصورة -->
+                </tr>
+            </thead>
+            <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        <a href="{% url 'detail_book' book.id %}" class="btn btn-info btn-sm text-white">تفاصيل</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'detail_book' book.id %}" class="btn btn-warning btn-sm text-white">تعديل</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'detail_book' book.id %}" class="btn btn-danger btn-sm">حذف</a>
+                    </td>
+                    <td>
+                        <div class="text-center mb-4">
+                            {% if book.img %}
+                                <img src="{{ book.img.url }}" alt="Book Cover" class="img-thumbnail" style="max-width: 80px;">
+                            {% else %}
+                                <span class="text-muted">No image</span>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center text-muted">No books available.</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'create_book' %}" class="btn btn-primary d-block mx-auto" style="max-width:200px;">Create book</a>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- ملف JS خاص بك (اختياري) -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
