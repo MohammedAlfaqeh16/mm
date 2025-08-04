@@ -35,8 +35,8 @@
 
 ```bash
 # 1. نسخ المستودع
-git clone https://github.com/YourUsername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/MohammedAlfaqeh16/mm.git
+cd mm
 
 # 2. إنشاء بيئة افتراضية
 python -m venv venv
@@ -96,6 +96,6 @@ user	user123	مستخدم عادي
 
 📬 معلومات التواصل
 محمد الفقيه
-📧 mohammed@example.com
+📧 alfaqehm20@gmail.com
 🔗 حساب GitHub
 
