@@ -28,8 +28,8 @@
 ## 📸 صور من المشروع
 
 > يمكنك إضافة صور لواجهة المستخدم هنا لاحقًا عند رفعها على المستودع أو باستخدام روابط مباشرة.
-> <img width="1366" height="768" alt="‏‏لقطة الشاشة (40)" src="https://github.com/user-attachments/assets/3496339d-3592-430e-9e41-d75573d17b4b" 
->
+
+
 > <img width="1366" height="768" alt="‏‏لقطة الشاشة (41)" src="https://github.com/user-attachments/assets/5304b43e-2059-43bb-9f9f-f8ab03edca89" />
 <img width="1366" height="768" alt="‏‏لقطة الشاشة (46)" src="https://github.com/user-attachments/assets/d10eb2a7-021c-44b1-a451-f6f023cbb8f3" />
 <img width="1366" height="768" alt="‏‏لقطة الشاشة (45)" src="https://github.com/user-attachments/assets/ba999bac-371a-4fb2-a63c-9bf784b2138c" />
