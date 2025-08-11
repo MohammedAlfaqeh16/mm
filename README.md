@@ -1,4 +1,4 @@
-# 📚 نظام إدارة مكتبة باستخدام Django
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (40)" src="https://github.com/user-attachments/assets/3496339d-3592-430e-9e41-d75573d17b4b" /># 📚 نظام إدارة مكتبة باستخدام Django
 
 مشروع ويب بسيط واحترافي لإدارة مكتبة باستخدام إطار العمل **Django**، يسمح بإضافة الكتب، تسجيل المستخدمين، تسجيل الدخول، وتنظيم الواجهة باستخدام **Bootstrap 5** و**Font Awesome**.
 
@@ -29,17 +29,13 @@
 
 > يمكنك إضافة صور لواجهة المستخدم هنا لاحقًا عند رفعها على المستودع أو باستخدام روابط مباشرة.
 >
-> <img width="1366" height="768" alt="‏‏لقطة الشاشة (40)" src="https://github.com/user-attachments/assets/5293453c-192c-4493-af0f-3615af7176ff" />
+> <img width="1366" height="768" alt="‏‏لقطة الشاشة (41)" src="https://github.com/user-attachments/assets/5304b43e-2059-43bb-9f9f-f8ab03edca89" />
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (46)" src="https://github.com/user-attachments/assets/d10eb2a7-021c-44b1-a451-f6f023cbb8f3" />
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (45)" src="https://github.com/user-attachments/assets/ba999bac-371a-4fb2-a63c-9bf784b2138c" />
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (44)" src="https://github.com/user-attachments/assets/51337342-e94f-49ed-bb3c-4577598b68c3" />
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (43)" src="https://github.com/user-attachments/assets/bcf5ee81-bc18-4a85-9ab2-1ab549294097" />
+<img width="1366" height="768" alt="‏‏لقطة الشاشة (42)" src="https://github.com/user-attachments/assets/1b6d71c7-f738-44e6-9ee6-9922b88992b7" />
 
-
-<img width="1366" height="768" alt="‏‏لقطة الشاشة (41)" src="https://github.com/user-attachments/assets/17bb2ec1-5ed0-4bff-80f5-a85fae62b4fa" />
-<img width="1366" height="768" alt="‏‏لقطة الشاشة (42)" src="https://github.com/user-attachments/assets/8afe53b2-59bf-424c-93fc-e81a9cb1fe0e" />
- <img width="1366" height="768" alt="‏‏لقطة الشاشة (43)" src="https://github.com/user-attachments/assets/5293453c-192c-4493-af0f-3615af7176ff" />
-
-
-<img width="1366" height="768" alt="‏‏لقطة الشاشة (44)" src="https://github.com/user-attachments/assets/17bb2ec1-5ed0-4bff-80f5-a85fae62b4fa" />
-<img width="1366" height="768" alt="‏‏لقطة الشاشة (45)" src="https://github.com/user-attachments/assets/8afe53b2-59bf-424c-93fc-e81a9cb1fe0e" />
- <img width="1366" height="768" alt="‏‏لقطة الشاشة (46)" src="https://github.com/user-attachments/assets/5293453c-192c-4493-af0f-3615af7176ff" />
 
 
 
