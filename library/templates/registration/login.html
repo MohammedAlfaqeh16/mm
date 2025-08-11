@@ -1,37 +1,81 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <!-- ملف CSS خاص بك (اختياري) -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    {% if form.errors %}
-    <p class="text-danger">your username or password is incorrect</p>
-    {% endif %}
-    {% if next %}
-       {% if request.user.is_authenticated %}
-       <p class="text-warning">you don't have permistion to see this page</p>
-       {% else %}
-       <p class="text-info">login to see this page</p>
-       {% endif %}
-    {% endif %}
+{% load widget_tweaks %}
 
-    <form action="{% url 'login' %}" method="post" class="p-4 border rounded shadow-sm" style="max-width:400px;margin:auto;">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="submit" class="btn btn-primary">
-        <input type="hidden" value="{{next}}">
-    </form>
+{% block title %}Login{% endblock %}
 
-    <!-- Bootstrap JS -->
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <!-- ملف JS خاص بك (اختياري) -->
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+{% block content %}
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-lg w-100" style="max-width: 500px;">
+        <div class="card-body p-4">
+            <h2 class="text-center mb-4 text-primary">
+                <i class="fas fa-sign-in-alt me-2"></i> Login
+            </h2>
+
+            {% if form.errors %}
+                <div class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    Your username or password is incorrect.
+                </div>
+            {% endif %}
+
+            {% if next %}
+                {% if request.user.is_authenticated %}
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fas fa-lock me-2"></i>
+                        You don't have permission to see this page.
+                    </div>
+                {% else %}
+                    <div class="alert alert-info" role="alert">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Please log in to access this page.
+                    </div>
+                {% endif %}
+            {% endif %}
+
+            <form method="post" action="{% url 'login' %}" novalidate>
+                {% csrf_token %}
+
+                {% for field in form %}
+                    <div class="mb-3">
+                        <label for="{{ field.id_for_label }}" class="form-label fw-semibold">
+                            {{ field.label }}
+                        </label>
+
+                        <div class="input-group">
+                            {% if field.name == 'username' %}
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            {% elif field.name == 'password' %}
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            {% endif %}
+                            {{ field|add_class:"form-control" }}
+                        </div>
+
+                        {% if field.errors %}
+                            <div class="form-text text-danger">
+                                {{ field.errors|striptags }}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                <input type="hidden" name="next" value="{{ next }}">
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt me-1"></i> Login
+                    </button>
+                </div>
+            </form>
+
+            <div class="text-center mt-4">
+                <p class="mb-0">Don't have an account?</p>
+                <a href="{% url 'register' %}" class="btn btn-outline-secondary mt-2">
+                    <i class="fas fa-user-plus me-1"></i> Register
+                </a>
+            </div>
+        </div>
+    </div>
+ </div>
+{% endblock %}
+

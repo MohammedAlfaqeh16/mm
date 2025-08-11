@@ -32,6 +32,12 @@ class Book(models.Model):
     language =models.ForeignKey("Language", on_delete=models.SET_NULL , null=True)
     img = models.ImageField(upload_to='books/', null=True, blank=True)
 
+
+    class Meta:
+        ordering = ['title']
+
+
+
     def __str__(self):
         return self.title
     def get_absolute_url(self):

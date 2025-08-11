@@ -9,12 +9,14 @@ from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
    num_book= models.Book.objects.all().count()
+   authers = models.Author.objects.all().count()
    num_book_instanc =models.BookInstance.objects.all().count()
    num_book_instanc_av =models.BookInstance.objects.filter(status__exact='a').count
    context={
       'num_book':num_book,
       'num_book_instanc':num_book_instanc,
       'num_book_instanc_av':num_book_instanc_av
+      ,'authers':authers
    }
    
    return render(request , 'index.html',context)
@@ -23,6 +25,7 @@ def index(request):
 class BookCreate(LoginRequiredMixin,generic.CreateView):
    model =models.Book
    fields='__all__'
+   
    success_url='/library/list-book'
    template_name='create.html'
 

@@ -21,7 +21,7 @@ from django.contrib.auth import views as v
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls ),
     # تضمين روابط تطبيق المكتبة
     path('library', include('library.urls'), name='library'),  # بافتراض أن اسم التطبيق هو library
     # إعادة توجيه الرابط الرئيسي إلى صفحة المكتبة
